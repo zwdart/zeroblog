@@ -1,0 +1,158 @@
+# hugo server --bind 0.0.0.0 --baseURL http://192.168.9.58:1313 -D
+# ===== 站点基础配置 =====
+baseURL = "https://dart.xin"
+languageCode = "zh-cn"  # 设置默认语言[reference:1]
+title = "山高月小"
+theme = "PaperMod"                   # 启用 Dream 主题[reference:2]
+copyright = "zou"                  # 可选：版权信息
+
+
+# ===== 站点基础配置 =====
+
+# 开启 Emoji 支持
+enableEmoji = true
+# 开启 robots.txt，利于 SEO
+enableRobotsTXT = true
+
+# 分页设置，每页显示的文章数量
+paginate = 5
+
+# ===== 输出格式（开启搜索需要） =====
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ===== 主题参数配置 =====
+[params]
+  # 作者信息
+  author = "你的名字"
+  # 站点描述，用于 SEO
+  description = "你的博客描述"
+  # 默认主题模式：auto (跟随系统), light (亮色), dark (暗色)
+  defaultTheme = "auto"
+
+  # ----- 文章页面显示控制 -----
+  ShowReadingTime = true         # 显示阅读时间
+  ShowShareButtons = true        # 显示分享按钮
+  ShowPostNavLinks = true        # 显示上一篇/下一篇导航
+  ShowBreadCrumbs = true         # 显示面包屑导航
+  ShowCodeCopyButtons = true     # 代码块显示复制按钮
+  ShowToc = true                 # 全局开启目录
+  TocOpen = false                # 目录默认收起
+  ShowFullTextinRSS = true       # RSS 输出全文
+
+  # ----- 首页信息模式 -----
+  [params.homeInfoParams]
+    Title = "欢迎来到我的博客 👋"
+    Content = """
+这里记录我的技术学习与生活思考。
+
+- 我的 [GitHub](https://github.com/zwdart)
+- 我的 [关于页面](/about/)
+- 订阅 [RSS](/index.xml)
+"""
+
+  # ----- 社交图标 -----
+  # 图标名称必须使用小写
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/zwdart"
+
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/zwdart"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:zsky@mail.com"  
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "index.xml"
+
+  [params.globalTags]
+    tech = "技术分享"
+    life = "生活随笔"
+    note = "学习笔记"
+    tool = "工具推荐" 
+
+  # ----- 搜索配置（Fuse.js） -----
+  [params.fuseOpts]
+    isCaseSensitive = false
+    includeScore = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.6
+    minMatchCharLength = 1
+    keys = ["title", "permalink", "summary", "content"]
+
+  # ----- 评论系统（以 Giscus 为例） -----
+  comments = true
+  giscusRepo = "zwdart/仓库名"
+  giscusRepoId = "你的仓库ID"
+  giscusCategory = "General"
+  giscusCategoryId = "你的分类ID"
+  giscusMapping = "pathname"
+  giscusReactionsEnabled = "1"
+  giscusTheme = "light"
+
+  # ----- 文章页封面相关 -----
+  [params.cover]
+    hidden = false           # 全局是否隐藏封面
+    hiddenInList = false     # 列表中是否隐藏封面
+    hiddenInSingle = false   # 文章页是否隐藏封面
+
+# ===== 菜单配置 =====
+[[menu.main]]
+  name = "文章"
+  url = "posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "归档"
+  url = "archives/"
+  weight = 20
+
+[[menu.main]]
+  name = "标签"
+  url = "tags/"
+  weight = 30
+
+[[menu.main]]
+  name = "搜索"
+  url = "search/"
+  weight = 40
+
+# ===== Markup 配置 =====
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # 允许在 Markdown 中直接写 HTML
+      unsafe = true
+
+  [markup.highlight]
+    # 代码高亮样式
+    style = "monokai"
+    noClasses = false
+    lineNos = true
+    lineNumbersInTable = true
+
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+    ordered = false
+
+# ===== 其他 =====
+# 相关文章推荐
+[related]
+  includeNewer = true
+  threshold = 60
+  toLower = false
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "categories"
+    weight = 200

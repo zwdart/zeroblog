@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="60%" stop-color="#1b2d45"/>
+      <stop offset="100%" stop-color="#2e4a62"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a5a7a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1a2a3a" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="moonGlow">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- 天空 -->
+  <rect width="1200" height="630" fill="url(#sky)"/>
+
+  <!-- 月亮：小，呼应“月小” -->
+  <circle cx="880" cy="120" r="45" fill="#ffffff" opacity="0.08" filter="url(#moonGlow)"/>
+  <circle cx="880" cy="120" r="22" fill="#f5f5f0"/>
+
+  <!-- 远山 -->
+  <path d="M0 480 L180 340 L320 420 L500 300 L680 400 L820 320 L1000 430 L1200 380 L1200 630 L0 630 Z"
+        fill="#1e3040" opacity="0.7"/>
+
+  <!-- 近山主峰：高，呼应“山高” -->
+  <path d="M0 560 L200 420 L380 520 L600 280 L820 480 L1000 380 L1200 500 L1200 630 L0 630 Z"
+        fill="#0f1a26" opacity="0.95"/>
+
+  <!-- 水落：水面退去 -->
+  <rect x="0" y="540" width="1200" height="90" fill="url(#water)"/>
+
+  <!-- 石出：露出水面的石头 -->
+  <g fill="#4a5a6a" opacity="0.9">
+    <ellipse cx="300" cy="570" rx="45" ry="18"/>
+    <ellipse cx="360" cy="585" rx="30" ry="12"/>
+    <ellipse cx="750" cy="560" rx="55" ry="20"/>
+    <ellipse cx="820" cy="580" rx="35" ry="14"/>
+    <ellipse cx="900" cy="565" rx="25" ry="10"/>
+    <ellipse cx="520" cy="595" rx="40" ry="15"/>
+  </g>
+
+  <!-- 水纹 -->
+  <g stroke="#6a8aaa" stroke-width="1.5" opacity="0.3" fill="none">
+    <path d="M100 560 Q200 555 300 560 Q400 565 500 560"/>
+    <path d="M600 575 Q700 570 800 575 Q900 580 1000 575"/>
+  </g>
+
+  <!-- 疏星 -->
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="200" cy="80" r="1.5"/>
+    <circle cx="400" cy="150" r="1"/>
+    <circle cx="1050" cy="60" r="1.2"/>
+    <circle cx="700" cy="90" r="1"/>
+    <circle cx="500" cy="50" r="1.5"/>
+  </g>
+</svg>
