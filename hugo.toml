@@ -1,11 +1,10 @@
 # hugo server --bind 0.0.0.0 --baseURL http://192.168.9.58:1313 -D
 # ===== 站点基础配置 =====
-baseURL = "https://dart.xin"
-languageCode = "zh-cn"  # 设置默认语言[reference:1]
+baseURL = "https://zwdart.pages.dev/"
+locale = "zh-cn"  # 设置默认语言[reference:1]
 title = "山高月小"
 theme = "PaperMod"                   # 启用 Dream 主题[reference:2]
 copyright = "zou"                  # 可选：版权信息
-relativeURLs = true
 
 # ===== 站点基础配置 =====
 
