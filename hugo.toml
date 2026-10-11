@@ -5,7 +5,7 @@ languageCode = "zh-cn"  # 设置默认语言[reference:1]
 title = "山高月小"
 theme = "PaperMod"                   # 启用 Dream 主题[reference:2]
 copyright = "zou"                  # 可选：版权信息
-
+relativeURLs = true
 
 # ===== 站点基础配置 =====
 
