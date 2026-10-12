@@ -3,7 +3,7 @@ title: '君子曰：学不可以已。'
 date: '2026-10-12T10:53:42+08:00'
 categories: ['study']
 tags: ['君子曰：学不可以已。']
-description: 'desc'
+description: ''
 draft: false
 
 cover:

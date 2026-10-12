@@ -3,7 +3,7 @@ title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 date: '{{ .Date }}'
 categories: []
 tags: []
-description: 'desc'
+description: ''
 draft: true
 
 cover:
