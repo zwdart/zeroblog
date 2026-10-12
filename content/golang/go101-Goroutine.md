@@ -2,7 +2,6 @@
 title: Goroutine详细：并发编程详细讲解
 date: 2026-10-10T10:02:47+08:00
 lastmod: 2026-10-10T10:02:47+08:00
-author: Zero 
 # avatar: /img/author.jpg
 # authorlink: https://author.site
 cover:

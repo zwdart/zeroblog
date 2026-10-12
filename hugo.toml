@@ -1,11 +1,9 @@
-# hugo server --bind 0.0.0.0 --baseURL http://192.168.9.58:1313 -D
-# hugo v0.167.0-3fff6fb5c267dacb26280c78dbe8c344054249c8 linux/amd64 BuildDate=2026-09-28T14:50:38Z VendorInfo=gohugoio
 # ===== 站点基础配置 =====
 baseURL = "https://zwdart.pages.dev/"
 locale = "zh-cn"  # 设置默认语言[reference:1]
 title = "山高月小"
 theme = "PaperMod"                   # 启用 Dream 主题[reference:2]
-copyright = "zou"                  # 可选：版权信息
+copyright = "zwdart"                  # 可选：版权信息
 
 # ===== 站点基础配置 =====
 
@@ -23,8 +21,18 @@ paginate = 5
 
 # ===== 主题参数配置 =====
 [params]
+  # 指定主页显示的文章来源板块，可以添加多个
+  mainSections = ["posts", "golang", "softexam"]
+  # 启用分类显示
+  showCategories = true
+  # 启用标签显示（通常默认开启，建议同时确认）
+  showTags = true
+  # 启用搜索
+  ShowSearch = true
+  shareButtons = ["twitter", "linkedin"]
+
   # 作者信息
-  author = "你的名字"
+  author = "zwdart"
   # 站点描述，用于 SEO
   description = "你的博客描述"
   # 默认主题模式：auto (跟随系统), light (亮色), dark (暗色)
@@ -49,6 +57,7 @@ paginate = 5
 - 我的 [GitHub](https://github.com/zwdart)
 - 我的 [关于页面](/about/)
 - 订阅 [RSS](/index.xml)
+
 """
 
   # ----- 社交图标 -----
@@ -68,12 +77,6 @@ paginate = 5
   [[params.socialIcons]]
     name = "rss"
     url = "index.xml"
-
-  [params.globalTags]
-    tech = "技术分享"
-    life = "生活随笔"
-    note = "学习笔记"
-    tool = "工具推荐" 
 
   # ----- 搜索配置（Fuse.js） -----
   [params.fuseOpts]
@@ -104,19 +107,24 @@ paginate = 5
 
 # ===== 菜单配置 =====
 [[menu.main]]
-  name = "文章"
-  url = "posts/"
+  name = "归档"
+  url = "archives/"
   weight = 10
 
 [[menu.main]]
-  name = "归档"
-  url = "archives/"
-  weight = 20
+  name = "分类"
+  url = "categories/"
+  weight = 15
 
 [[menu.main]]
   name = "标签"
   url = "tags/"
-  weight = 30
+  weight = 20
+
+[[menu.main]]
+  name = "软考"
+  url = "softexam/"
+  weight = 30  
 
 [[menu.main]]
   name = "搜索"

@@ -2,7 +2,6 @@
 title: Goroutine详细：sync.WaitGroup
 date: 2026-10-11T22:51:47+08:00
 lastmod: 2026-10-11T22:52:47+08:00
-author: Zero 
 # avatar: /img/author.jpg
 # authorlink: https://author.site
 cover:
