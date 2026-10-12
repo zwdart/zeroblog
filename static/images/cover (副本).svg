@@ -1,0 +1,144 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 夜空：深蓝墨色渐变 -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="45%" stop-color="#132033"/>
+      <stop offset="100%" stop-color="#1C2A3E"/>
+    </linearGradient>
+
+    <!-- 主峰：墨色带一点冷青 -->
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E2C3C"/>
+      <stop offset="100%" stop-color="#0A1119"/>
+    </linearGradient>
+
+    <!-- 远山：更低对比 -->
+    <linearGradient id="farMountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A3B50"/>
+      <stop offset="100%" stop-color="#1A2636"/>
+    </linearGradient>
+
+    <!-- 月亮光晕 -->
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF6D8" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#FFF6D8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFF6D8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 水面反光 -->
+    <linearGradient id="waterGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF6D8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#FFF6D8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 夜空 -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+
+  <!-- 稀疏星点 -->
+  <g fill="#E8EDF2">
+    <circle cx="90" cy="80" r="1.1" opacity="0.7"/>
+    <circle cx="180" cy="150" r="0.9" opacity="0.5"/>
+    <circle cx="260" cy="60" r="1.2" opacity="0.6"/>
+    <circle cx="360" cy="120" r="0.8" opacity="0.45"/>
+    <circle cx="450" cy="70" r="1" opacity="0.55"/>
+    <circle cx="540" cy="170" r="0.9" opacity="0.4"/>
+    <circle cx="720" cy="90" r="1.1" opacity="0.6"/>
+    <circle cx="760" cy="200" r="0.8" opacity="0.4"/>
+    <circle cx="130" cy="230" r="0.7" opacity="0.35"/>
+    <circle cx="400" cy="200" r="0.9" opacity="0.4"/>
+  </g>
+
+  <!-- 月光晕 -->
+  <circle cx="640" cy="120" r="110" fill="url(#moonGlow)"/>
+
+  <!-- 月亮 -->
+  <circle cx="640" cy="120" r="22" fill="#FFFDF2"/>
+  <!-- 月面暗纹 -->
+  <circle cx="633" cy="113" r="4" fill="#EDE4CE" opacity="0.75"/>
+  <circle cx="647" cy="127" r="3" fill="#EDE4CE" opacity="0.65"/>
+  <circle cx="638" cy="130" r="2" fill="#EDE4CE" opacity="0.5"/>
+
+  <!-- 飞鸟 -->
+  <path d="M 500 180 Q 508 172 516 180 Q 524 172 532 180"
+        stroke="#8DA3B8" stroke-width="1.3" fill="none" opacity="0.5"/>
+  <path d="M 545 212 Q 551 206 557 212 Q 563 206 569 212"
+        stroke="#8DA3B8" stroke-width="1.1" fill="none" opacity="0.35"/>
+
+  <!-- 远山：随机起伏的低矮山影 -->
+  <path d="M 0 445 L 55 418 L 95 430 L 150 402 L 205 425 L 265 395 L 320 418 L 380 400 L 440 422 L 500 405 L 560 428 L 620 410 L 690 430 L 750 415 L 800 428 L 800 520 L 0 520 Z"
+        fill="url(#farMountain)" opacity="0.75"/>
+
+  <!-- 主峰：不对称、起伏自然的山形 -->
+  <path d="M 40 520
+           L 105 425
+           L 140 452
+           L 178 372
+           L 212 398
+           L 246 310
+           L 268 236
+           L 286 168
+           L 305 210
+           L 322 268
+           L 352 320
+           L 385 356
+           L 402 400
+           L 438 440
+           L 470 520
+           Z"
+        fill="url(#mountain)"/>
+
+  <!-- 次峰：与主峰呼应，形态更矮更偏 -->
+  <path d="M 430 520
+           L 468 452
+           L 496 470
+           L 528 418
+           L 552 444
+           L 582 400
+           L 608 430
+           L 640 470
+           L 668 520
+           Z"
+        fill="url(#mountain)" opacity="0.92"/>
+
+  <!-- 山体皴纹：几笔淡线，增强质感 -->
+  <g stroke="#3C5068" fill="none" opacity="0.5">
+    <path d="M 286 168 L 268 260 L 278 340" stroke-width="1"/>
+    <path d="M 286 168 L 314 250 L 306 330" stroke-width="0.9"/>
+    <path d="M 286 168 L 250 300 L 258 390" stroke-width="0.8"/>
+    <path d="M 178 372 L 190 420 L 200 460" stroke-width="0.8"/>
+    <path d="M 582 400 L 590 450 L 600 490" stroke-width="0.7"/>
+  </g>
+
+  <!-- 水面：低而静 -->
+  <rect x="0" y="490" width="800" height="110" fill="#0C1520"/>
+  <path d="M 0 490 Q 100 486 200 490 T 400 490 T 600 488 T 800 492"
+        stroke="#3E5468" stroke-width="1.3" fill="none" opacity="0.7"/>
+  <path d="M 0 508 Q 130 504 260 508 T 520 508 T 800 510"
+        stroke="#3E5468" stroke-width="1" fill="none" opacity="0.45"/>
+
+  <!-- 水中月影 -->
+  <ellipse cx="640" cy="525" rx="26" ry="5" fill="url(#waterGlow)"/>
+
+  <!-- 石头（水落石出） -->
+  <path d="M 470 490 L 492 468 L 522 474 L 540 490 Z"
+        fill="#0A1119" stroke="#33475C" stroke-width="0.6"/>
+  <path d="M 575 492 L 596 475 L 626 481 L 644 492 Z"
+        fill="#0A1119" stroke="#33475C" stroke-width="0.6" opacity="0.9"/>
+  <path d="M 668 488 L 686 474 L 710 480 L 724 490 Z"
+        fill="#0A1119" stroke="#33475C" stroke-width="0.6" opacity="0.75"/>
+
+  <!-- 题字 -->
+  <!-- <text font-family="Songti SC, STSong, SimSun, Noto Serif SC, serif"
+        font-size="20" fill="#C9D6E2" text-anchor="middle" letter-spacing="1" opacity="0.9">
+    <tspan x="120" y="180">山</tspan>
+    <tspan x="120" y="208">高</tspan>
+    <tspan x="120" y="236">月</tspan>
+    <tspan x="120" y="264">小</tspan>
+    <tspan x="190" y="180">水</tspan>
+    <tspan x="190" y="208">落</tspan>
+    <tspan x="190" y="236">石</tspan>
+    <tspan x="190" y="264">出</tspan>
+  </text> -->
+</svg>

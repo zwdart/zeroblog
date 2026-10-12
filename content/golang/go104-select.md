@@ -4,7 +4,7 @@ date: '2026-10-12T09:55:20+08:00'
 categories: ['golang']
 tags: ['select']
 description: 'Go select 详细讲解，是 Go 专门为 channel 设计的多路复用语句，类似 `switch`，但每个 case 都是 channel 操作。它让一个 goroutine 能同时等待多个 channel 的读写。'
-draft: true
+draft: false
 
 cover:
   image: 'images/cover.svg'

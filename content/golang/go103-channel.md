@@ -1,7 +1,7 @@
 +++
 title = 'Goroutine Channel'
 date = '2026-10-12T09:31:48+08:00'
-draft = true
+draft = false
 categories = ["golang"]
 tags = ["goroutine", "channel"]
 description = 'Go Channel 详细讲解'
