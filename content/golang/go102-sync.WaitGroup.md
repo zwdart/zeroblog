@@ -16,7 +16,6 @@ categories:
   - golang
 tags:
   - Goroutine
-  - golang
   - WaitGroup
 # nolastmod: true
 # math: true

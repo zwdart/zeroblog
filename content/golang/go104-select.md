@@ -2,7 +2,7 @@
 title: 'Goroutine Select'
 date: '2026-10-12T09:55:20+08:00'
 categories: ['golang']
-tags: ['select']
+tags: ['goroutine','select']
 description: 'Go 专门为 channel 设计的多路复用语句，'
 draft: false
 

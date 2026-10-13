@@ -16,7 +16,6 @@ categories:
   - golang
 tags:
   - Goroutine
-  - golang
 # nolastmod: true
 # math: true
 draft: false
