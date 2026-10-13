@@ -4,10 +4,11 @@ date: '2026-10-12T10:53:42+08:00'
 categories: ['study']
 tags: ['君子曰：学不可以已。']
 description: ''
+# weight: -10  # 设置一个较小的值，其他普通文章默认为 0 或不填
 draft: false
 
 cover:
-  image: 'images/cover.svg'
+  image: 'images/cover2.svg'
   alt: '山高月小，水落石出。'
   caption: '山水'
   hidden: false

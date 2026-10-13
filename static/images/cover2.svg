@@ -1,0 +1,119 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- 背景纹理滤镜 -->
+        <filter id="paperTexture" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+            <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.05 0" in="noise" result="coloredNoise" />
+            <feComposite operator="in" in="coloredNoise" in2="SourceGraphic" result="composite" />
+            <feBlend mode="multiply" in="composite" in2="SourceGraphic" />
+        </filter>
+        
+        <!-- 云雾模糊滤镜 -->
+        <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="12" />
+        </filter>
+        <filter id="blurLight" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="6" />
+        </filter>
+    </defs>
+
+    <!-- 背景 -->
+    <rect width="800" height="600" fill="#fdfbf7" />
+    
+    <!-- 远山 -->
+    <path d="M 0 350 Q 100 200 250 300 T 500 250 T 800 300 L 800 600 L 0 600 Z" fill="#e8e4db" />
+    
+    <!-- 中景山 -->
+    <path d="M 0 450 Q 150 300 300 400 T 600 350 T 800 420 L 800 600 L 0 600 Z" fill="#d1c9bb" />
+    
+    <!-- 近景山/地面 -->
+    <path d="M 0 550 Q 200 480 400 520 T 800 500 L 800 600 L 0 600 Z" fill="#b8b0a1" />
+
+    <!-- 太阳/月亮 -->
+    <circle cx="650" cy="220" r="55" fill="#e8c5b0" opacity="0.6" />
+
+    <!-- 云雾 -->
+    <path d="M 100 280 Q 250 250 400 280 T 700 260" fill="none" stroke="#ffffff" stroke-width="20" opacity="0.4" stroke-linecap="round" filter="url(#blur)" />
+    <path d="M 200 350 Q 350 320 500 350 T 800 330" fill="none" stroke="#ffffff" stroke-width="15" opacity="0.3" stroke-linecap="round" filter="url(#blurLight)" />
+
+    <!-- 蜿蜒小径 -->
+    <path d="M 50 600 Q 150 540 300 520 T 550 510 T 800 530" fill="none" stroke="#8c8374" stroke-width="3" stroke-dasharray="8 6" opacity="0.6" />
+
+    <!-- 竹子（左侧） -->
+    <g>
+        <!-- 竹竿 -->
+        <path d="M 40 200 Q 50 400 40 600" fill="none" stroke="#5a7d5a" stroke-width="7" stroke-linecap="round" />
+        <!-- 竹节 -->
+        <path d="M 37 300 L 43 300 M 37 400 L 43 400 M 37 500 L 43 500" stroke="#5a7d5a" stroke-width="4" />
+        <!-- 竹叶 -->
+        <path d="M 40 240 Q 70 220 90 240 Q 60 260 40 240 Z" fill="#5a7d5a" opacity="0.9" />
+        <path d="M 40 260 Q 70 250 85 270 Q 60 285 40 260 Z" fill="#5a7d5a" opacity="0.8" />
+        <path d="M 40 340 Q 10 320 -10 340 Q 20 360 40 340 Z" fill="#5a7d5a" opacity="0.9" />
+        <path d="M 40 360 Q 15 355 0 370 Q 20 385 40 360 Z" fill="#5a7d5a" opacity="0.7" />
+    </g>
+
+    <!-- 竹子（右侧） -->
+    <g>
+        <path d="M 760 300 Q 750 450 760 600" fill="none" stroke="#4a6d4a" stroke-width="5" stroke-linecap="round" />
+        <path d="M 757 400 L 763 400 M 757 500 L 763 500" stroke="#4a6d4a" stroke-width="3" />
+        <path d="M 760 360 Q 730 340 710 360 Q 730 380 760 360 Z" fill="#4a6d4a" opacity="0.8" />
+        <path d="M 760 380 Q 735 375 720 390 Q 740 405 760 380 Z" fill="#4a6d4a" opacity="0.7" />
+    </g>
+
+    <!-- 学者剪影（左下角） -->
+    <g>
+        <!-- 书桌 -->
+        <rect x="80" y="500" width="130" height="12" fill="#5c4a3d" rx="3" />
+        <rect x="90" y="512" width="8" height="40" fill="#5c4a3d" />
+        <rect x="192" y="512" width="8" height="40" fill="#5c4a3d" />
+        
+        <!-- 学者身体 -->
+        <path d="M 145 500 L 145 440 Q 160 420 175 440 L 175 500 Z" fill="#2c2c2c" />
+        <!-- 学者头部 -->
+        <circle cx="160" cy="420" r="14" fill="#2c2c2c" />
+        <!-- 发髻 -->
+        <circle cx="160" cy="405" r="5" fill="#2c2c2c" />
+        
+        <!-- 手持毛笔 -->
+        <path d="M 155 460 L 190 450 L 200 440" fill="none" stroke="#2c2c2c" stroke-width="3" stroke-linecap="round" />
+        <line x1="200" y1="440" x2="205" y2="435" stroke="#2c2c2c" stroke-width="2" />
+        
+        <!-- 桌上卷轴 -->
+        <rect x="90" y="488" width="110" height="12" fill="#fdfbf7" stroke="#8c8374" stroke-width="1.5" rx="2" />
+        <!-- 卷轴上的文字线条 -->
+        <line x1="100" y1="492" x2="180" y2="492" stroke="#8c8374" stroke-width="1" opacity="0.6" />
+        <line x1="100" y1="496" x2="170" y2="496" stroke="#8c8374" stroke-width="1" opacity="0.6" />
+    </g>
+
+    <!-- 标题与文字 -->
+    <g>
+        <!-- 主标题 -->
+        <text x="400" y="80" font-size="52" font-family="'KaiTi', 'STKaiti', 'SimSun', serif" fill="#2c2c2c" text-anchor="middle" font-weight="bold" letter-spacing="8">荀子 · 劝学</text>
+        
+        <!-- 装饰线 -->
+        <line x1="200" y1="105" x2="600" y2="105" stroke="#c43b33" stroke-width="2" opacity="0.5" />
+        <circle cx="400" cy="105" r="4" fill="#c43b33" opacity="0.8" />
+        <circle cx="200" cy="105" r="3" fill="#c43b33" opacity="0.8" />
+        <circle cx="600" cy="105" r="3" fill="#c43b33" opacity="0.8" />
+        
+        <!-- 名句一 -->
+        <text x="400" y="150" font-size="26" font-family="'SimSun', 'STSong', serif" fill="#4a4a4a" text-anchor="middle" letter-spacing="6">不积跬步，无以至千里</text>
+        
+        <!-- 名句二 -->
+        <text x="400" y="195" font-size="26" font-family="'SimSun', 'STSong', serif" fill="#4a4a4a" text-anchor="middle" letter-spacing="6">锲而不舍，金石可镂</text>
+    </g>
+
+    <!-- 红色印章（右上角） -->
+    <g>
+        <rect x="680" y="60" width="60" height="60" fill="#c43b33" rx="4" />
+        <!-- 印章内的文字 -->
+        <text x="710" y="88" font-size="22" font-family="'KaiTi', 'STKaiti', serif" fill="#fdfbf7" text-anchor="middle" font-weight="bold">劝</text>
+        <text x="710" y="112" font-size="22" font-family="'KaiTi', 'STKaiti', serif" fill="#fdfbf7" text-anchor="middle" font-weight="bold">学</text>
+    </g>
+
+    <!-- 底部装饰性印章 -->
+    <g>
+        <rect x="720" y="520" width="40" height="40" fill="none" stroke="#c43b33" stroke-width="2" rx="2" opacity="0.7" />
+        <text x="740" y="548" font-size="18" font-family="'KaiTi', serif" fill="#c43b33" text-anchor="middle" opacity="0.8">荀</text>
+    </g>
+</svg>
