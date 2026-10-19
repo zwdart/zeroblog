@@ -113,7 +113,7 @@
 
     <!-- 底部装饰性印章 -->
     <g>
-        <rect x="720" y="520" width="40" height="40" fill="none" stroke="#c43b33" stroke-width="2" rx="2" opacity="0.7" />
-        <text x="740" y="548" font-size="18" font-family="'KaiTi', serif" fill="#c43b33" text-anchor="middle" opacity="0.8">荀</text>
+        <rect x="720" y="520" width="40" height="40" fill="#c43b33" stroke="#c43b33" stroke-width="2" rx="2" opacity="0.7" />
+        <text x="740" y="548" font-size="18" font-family="'KaiTi', serif" fill="#ffffff" text-anchor="middle" opacity="0.8">荀</text>
     </g>
 </svg>
