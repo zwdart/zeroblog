@@ -24,7 +24,7 @@ paginate = 5
 # ===== 主题参数配置 =====
 [params]
   # 指定主页显示的文章来源板块，可以添加多个
-  mainSections = ["posts", "golang", "softexam"]
+  mainSections = ["posts", "golang", "godot","softexam"]
   # 启用分类显示
   showCategories = true
   # 启用标签显示（通常默认开启，建议同时确认）
@@ -125,8 +125,8 @@ paginate = 5
   weight = 20
 
 [[menu.main]]
-  name = "软考"
-  url = "softexam/"
+  name = "Godot"
+  url = "godot/"
   weight = 30  
 
 [[menu.main]]
