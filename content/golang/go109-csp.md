@@ -1,7 +1,7 @@
 ---
 title: 'CSP（Communicating Sequential Processes）详解'
 date: '2026-10-22T12:07:40+08:00'
-categories: [理论,Goroutine]
+categories: [golang,Goroutine]
 tags: [csp,golang]
 description: ''
 draft: false
